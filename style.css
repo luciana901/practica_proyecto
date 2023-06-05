@@ -4,18 +4,44 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+.home {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: url(https://www.todofondos.net/wp-content/uploads/todofondos-colorespasteles8.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.button {
+  padding: 6px 24px;
+  border: 2px solid #fff;
+  background: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.button:active {
+  transform: scale(0.98);
+}
 .form_container {
   position: absolute;
   max-width: 320px;
   width: 100%;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1.2);
   z-index: 101;
   background: #fff;
   padding: 25px;
   border-radius: 12px;
   box-shadow: rgba(0, 0, 0, 0.1);
+}
+.home.show .form_container {
+  opacity: 1;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(1);
+}
+.signup_form {
+  display: none;
 }
 .form_close {
   position: absolute;
